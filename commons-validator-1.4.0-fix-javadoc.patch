@@ -1,0 +1,20 @@
+--- commons-validator-1.4.0-src/build.xml.bero	2013-02-28 04:27:48.072195053 +0100
++++ commons-validator-1.4.0-src/build.xml	2013-02-28 04:27:53.537126732 +0100
+@@ -276,7 +276,7 @@
+ 
+   <target name="javadoc" depends="compile, javadoc.js"
+    description="Create component Javadoc documentation">
+-    <!--javadoc sourcepath="${source.home}"
++    <javadoc sourcepath="${source.home}"
+                 destdir="${dist.home}/docs/apidocs"
+            packagenames="org.apache.commons.*"
+                  author="true"
+@@ -285,7 +285,7 @@
+                doctitle="&lt;h1&gt;${component.title} (Version ${component.version})&lt;/h1&gt;"
+             windowtitle="${component.title} (Version ${component.version})"
+                  bottom="Copyright (c) 2001-2004  Apache Software Foundation"
+-           classpathref="compile.classpath" / -->
++           classpathref="compile.classpath" />
+   </target>
+ 
+ 
