@@ -11,6 +11,7 @@ Source1:        http://www.apache.org/dist/commons/validator/source/commons-vali
 Source2:        %{name}.catalog
 Patch0:		commons-validator-1.4.0-fix-javadoc.patch
 URL:            http://commons.apache.org/proper/commons-validator/
+BuildRequires:	java-1.6.0-openjdk-devel
 BuildRequires:  java-rpmbuild >= 0:1.5
 BuildRequires:  ant >= 0:1.6.2
 BuildRequires:  jakarta-commons-beanutils >= 0:1.5
@@ -61,6 +62,7 @@ cp -p %SOURCE2 src/main/resources/org/apache/commons/validator/resources/catalog
 
 %build
 export JAVA_HOME=%_prefix/lib/jvm/java-1.6.0
+export CLASSPATH=%_datadir/java/ant.jar:%_datadir/java/ant-launcher.jar
 ant -Dbuild.sysclasspath=ignore \
 -Djunit.jar=%{_javadir}/junit.jar \
 -Dcommons-beanutils.jar=%{_javadir}/commons-beanutils.jar \
@@ -73,6 +75,8 @@ dist
 
 %if %{with tests}
 %check
+export JAVA_HOME=%_prefix/lib/jvm/java-1.6.0
+export CLASSPATH=%_datadir/java/ant.jar:%_datadir/java/ant-launcher.jar
 ant -Dbuild.sysclasspath=ignore \
 -Djunit.jar=%{_javadir}/junit.jar \
 -Dcommons-beanutils.jar=%{_javadir}/commons-beanutils.jar \
