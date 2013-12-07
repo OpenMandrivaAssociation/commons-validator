@@ -3,7 +3,7 @@
 Summary:        Commons Validator
 Name:           commons-validator
 Version:        1.4.0
-Release:        2
+Release:        3
 License:        Apache License
 Group:          Development/Java
 Source0:        http://www.apache.org/dist/commons/validator/source/commons-validator-%{version}-src.tar.gz
