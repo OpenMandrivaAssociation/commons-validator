@@ -50,7 +50,7 @@ Javadoc for %{name}.
 
 %prep
 %setup -q -n %{name}-%{version}-src
-%apply_patches
+%autopatch -p1
 
 # Looks like upstream forgot to remove -SNAPSHOT from the version at
 # release time...
