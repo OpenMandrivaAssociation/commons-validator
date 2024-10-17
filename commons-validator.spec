@@ -10,7 +10,7 @@ Source0:        http://www.apache.org/dist/commons/validator/source/commons-vali
 Source1:        http://www.apache.org/dist/commons/validator/source/commons-validator-%{version}-src.tar.gz.asc
 Source2:        %{name}.catalog
 Patch0:		commons-validator-1.4.0-fix-javadoc.patch
-URL:            http://commons.apache.org/proper/commons-validator/
+URL:            https://commons.apache.org/proper/commons-validator/
 BuildRequires:	java-1.6.0-openjdk-devel
 BuildRequires:  java-rpmbuild >= 0:1.5
 BuildRequires:  ant >= 0:1.6.2
